@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="CroudFund_ejb">
+		<jta-data-source>java:/mysqlDS</jta-data-source>
+		<class>persistance.User</class>
+		<class>persistance.Administrator</class>
+		<class>persistance.Projects</class>
+		<class>persistance.Challenge</class>
+		<class>persistance.Forum</class>
+		<class>persistance.Comment</class>
+		<class>persistance.Winner</class>
+		<class>persistance.Donation</class>
+		<class>persistance.Investor</class>
+		<class>persistance.RatingPk</class>
+		<class>persistance.Rating</class>
+		<class>persistance.CommentPk</class>
+		<class>persistance.DonationPk</class>
+		<properties>
+			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
+		</properties>
+	</persistence-unit>
+</persistence>
