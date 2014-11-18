@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.9.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.5\Assemblies\v4.5\MySql.Data.dll</HintPath>
@@ -43,6 +49,8 @@
       <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.5\Assemblies\v4.5\MySql.Fabric.Plugin.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -51,6 +59,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\administrator.cs" />
+    <Compile Include="Models\challenge.cs" />
+    <Compile Include="Models\collabdbContext.cs" />
+    <Compile Include="Models\comment.cs" />
+    <Compile Include="Models\donation.cs" />
+    <Compile Include="Models\forum.cs" />
+    <Compile Include="Models\investor.cs" />
+    <Compile Include="Models\Mapping\administratorMap.cs" />
+    <Compile Include="Models\Mapping\challengeMap.cs" />
+    <Compile Include="Models\Mapping\commentMap.cs" />
+    <Compile Include="Models\Mapping\donationMap.cs" />
+    <Compile Include="Models\Mapping\forumMap.cs" />
+    <Compile Include="Models\Mapping\investorMap.cs" />
+    <Compile Include="Models\Mapping\participateMap.cs" />
+    <Compile Include="Models\Mapping\projectMap.cs" />
+    <Compile Include="Models\Mapping\ratingMap.cs" />
+    <Compile Include="Models\Mapping\userMap.cs" />
+    <Compile Include="Models\Mapping\winnerMap.cs" />
+    <Compile Include="Models\participate.cs" />
+    <Compile Include="Models\project.cs" />
+    <Compile Include="Models\rating.cs" />
+    <Compile Include="Models\user.cs" />
+    <Compile Include="Models\winner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestSlim.cs" />
   </ItemGroup>
@@ -59,6 +95,19 @@
       <Project>{9206078b-6e23-4ec6-9265-7d4372dced2d}</Project>
       <Name>CroudFunding.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Database1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Database1.cs</LastGenOutput>
+    </None>
+    <None Include="EF.Reverse.POCO.Core.ttinclude" />
+    <None Include="EF.Reverse.POCO.ttinclude" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
