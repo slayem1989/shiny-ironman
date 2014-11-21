@@ -39,8 +39,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\administrator.cs" />
+    <Compile Include="Entities\challenge.cs" />
+    <Compile Include="Entities\comment.cs" />
+    <Compile Include="Entities\donation.cs" />
+    <Compile Include="Entities\forum.cs" />
+    <Compile Include="Entities\investor.cs" />
+    <Compile Include="Entities\participate.cs" />
+    <Compile Include="Entities\project.cs" />
+    <Compile Include="Entities\rating.cs" />
+    <Compile Include="Entities\user.cs" />
+    <Compile Include="Entities\winner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
