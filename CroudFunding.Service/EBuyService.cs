@@ -1,4 +1,4 @@
-﻿using CroudFunding.Data.Infrastructure;
+using CroudFunding.Data.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -60,7 +60,7 @@ namespace CroudFunding.Service
             utOfWork.Commit();
         }
 
-        public comment GetComment(short id)
+        public comment GetComment(int id)
         {
             var Comment = utOfWork.CommentRepository.GetById(id);
             return Comment;
@@ -87,7 +87,7 @@ namespace CroudFunding.Service
             throw new NotImplementedException();
         }
 
-        public Domain.Entities.challenge GetDonation(short id)
+        public donation GetDonation(short id)
         {
             throw new NotImplementedException();
         }
@@ -112,7 +112,7 @@ namespace CroudFunding.Service
             throw new NotImplementedException();
         }
 
-        public Domain.Entities.challenge GetForum(short id)
+        public forum GetForum(short id)
         {
             throw new NotImplementedException();
         }
@@ -142,7 +142,7 @@ namespace CroudFunding.Service
             throw new NotImplementedException();
         }
 
-        public Domain.Entities.challenge GetParticipate(short id)
+        public participate GetParticipate(short id)
         {
             throw new NotImplementedException();
         }
@@ -167,7 +167,7 @@ namespace CroudFunding.Service
             throw new NotImplementedException();
         }
 
-        public Domain.Entities.challenge GetProject(short id)
+        public project GetProject(short id)
         {
             throw new NotImplementedException();
         }
@@ -192,7 +192,7 @@ namespace CroudFunding.Service
             throw new NotImplementedException();
         }
 
-        public Domain.Entities.challenge GetRating(short id)
+        public rating GetRating(short id)
         {
             throw new NotImplementedException();
         }
@@ -217,7 +217,7 @@ namespace CroudFunding.Service
             throw new NotImplementedException();
         }
 
-        public Domain.Entities.challenge GetUsers(short id)
+        public user GetUsers(short id)
         {
             throw new NotImplementedException();
         }
