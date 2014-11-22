@@ -1,3 +1,4 @@
+using CroudFunding.Domain.Entities;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace CroudFunding.Data.Models
+namespace CroudFunding.Domain.Entities
 {
     public partial class forum
     {

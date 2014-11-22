@@ -1,6 +1,7 @@
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using CroudFunding.Data.Models.Mapping;
+using CroudFunding.Domain.Entities;
 
 namespace CroudFunding.Data.Models
 {
