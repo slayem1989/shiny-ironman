@@ -1,21 +1,28 @@
-using CroudFunding.Data.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CroudFunding.Data.Infrastructure;
+using CroudFunding.Data.Repositories;
 using CroudFunding.Domain.Entities;
+using System.Data.SqlClient;
+using CroudFunding.Data.Models;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+
+
 
 namespace CroudFunding.Service
 {
     public class EBuyService : IEBuyService
     {
-        DatabaseFactory dbFactory = null;
-        IUnitOfWork utOfWork = null;
+        static DatabaseFactory dbFactory = new DatabaseFactory();
+        IUnitOfWork utOfWork = new UnitOfWork(dbFactory);
         public EBuyService()
         {
-            dbFactory = new DatabaseFactory();
-            utOfWork = new UnitOfWork(dbFactory);
+
         }
         public void CreateChallenge(challenge ch)
         {
@@ -154,28 +161,46 @@ namespace CroudFunding.Service
 
         public void CreateProject(Domain.Entities.project pro)
         {
-            throw new NotImplementedException();
+            utOfWork.ProjectsRepository.Add(pro);
+            utOfWork.Commit();
         }
 
         public void UpdateProject(Domain.Entities.project pro)
         {
-            throw new NotImplementedException();
+            utOfWork.ProjectsRepository.Update(pro);
+            utOfWork.Commit();
         }
 
         public void DeleteProject(short id)
         {
-            throw new NotImplementedException();
+            var pr = utOfWork.ProjectsRepository.GetById(id);
+            utOfWork.ProjectsRepository.Delete(pr);
+            utOfWork.Commit();
+
         }
 
         public project GetProject(short id)
         {
-            throw new NotImplementedException();
+            var pro = utOfWork.ProjectsRepository.GetById(id);
+            return pro;
         }
 
         public IEnumerable<Domain.Entities.project> GetAllProject()
         {
-            throw new NotImplementedException();
+            var pros = utOfWork.ProjectsRepository.GetAll();
+            return pros;
         }
+
+        public IEnumerable<Domain.Entities.project> GetprojectByName(string NameProject)
+        {
+
+            var projectsList = utOfWork.ProjectsRepository.GetMany(x => x.nameProject == NameProject);
+
+            return projectsList;
+        }
+
+
+
 
         public void CreateRating(Domain.Entities.rating rat)
         {
@@ -236,5 +261,13 @@ namespace CroudFunding.Service
         {
             throw new NotImplementedException();
         }
+
+        public IEnumerable<project> GetprojectbyTypeName(string NameProject, string TypeProject)
+        {
+            var projectsList = utOfWork.ProjectsRepository.GetMany(x => x.nameProject == NameProject && x.typeProject == TypeProject);
+
+            return projectsList;
+        }
     }
 }
+

@@ -71,7 +71,7 @@ namespace CroudFunding.Data.Infrastructure
         {
             get
             {
-                return dataContext = dbFactory.DataContext;
+                return dataContext ?? (dataContext = dbFactory.Get());
             }
         }
 

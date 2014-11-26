@@ -5,6 +5,7 @@ namespace CroudFunding.Domain.Entities
 {
     public partial class project
     {
+
         public int idProject { get; set; }
         public Nullable<System.DateTime> dateProject { get; set; }
         public string descripProject { get; set; }

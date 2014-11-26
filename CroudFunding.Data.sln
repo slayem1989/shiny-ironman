@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CroudFunding.Domain", "Crou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CroudFunding.Service", "CroudFunding.Service\CroudFunding.Service.csproj", "{90938BEE-10D5-4666-8E2B-944A56EFDB79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication", "TestApplication\TestApplication.csproj", "{BD028055-6D2F-47FD-9C1E-9858C688FE19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{90938BEE-10D5-4666-8E2B-944A56EFDB79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90938BEE-10D5-4666-8E2B-944A56EFDB79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90938BEE-10D5-4666-8E2B-944A56EFDB79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD028055-6D2F-47FD-9C1E-9858C688FE19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD028055-6D2F-47FD-9C1E-9858C688FE19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD028055-6D2F-47FD-9C1E-9858C688FE19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD028055-6D2F-47FD-9C1E-9858C688FE19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

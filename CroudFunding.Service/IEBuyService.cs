@@ -40,6 +40,12 @@ namespace CroudFunding.Service
         void DeleteProject(Int16 id);
         project GetProject(Int16 id);
         IEnumerable<project> GetAllProject();
+        IEnumerable<project> GetprojectByName(string NameProject);
+
+        IEnumerable<project> GetprojectbyTypeName(string NameProject, string TypeProject);
+
+        
+
         void CreateRating(rating rat);
         void UpdateRating(rating rat);
         void DeleteRating(Int16 id);
@@ -51,6 +57,7 @@ namespace CroudFunding.Service
         user GetUsers(Int16 id);
         IEnumerable<user> GetAllUsers();
         void CreateWinner(winner w);
+        
      
 
     }

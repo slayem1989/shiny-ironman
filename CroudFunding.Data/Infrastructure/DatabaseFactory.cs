@@ -1,33 +1,23 @@
 using CroudFunding.Data.Infrastructure;
 using CroudFunding.Data.Models;
 using System;
-public class DatabaseFactory : Disposable, IDatabaseFactory{
-	private collabdbContext dataContext; 
-    public collabdbContext DataContext 
-    {
-        get { return dataContext; }
-    }
-    public DatabaseFactory()
-    {
-        dataContext = new collabdbContext();
-    }
-	protected override void DisposeCore() {
-		if (dataContext != null) dataContext.Dispose(); }
 
-    public collabdbContext Get()
+namespace CroudFunding.Data.Infrastructure
+{
+    public class DatabaseFactory : Disposable, IDatabaseFactory
     {
-        throw new NotImplementedException();
-    }
+        private collabdbContext dataContext = null;
 
-    collabdbContext IDatabaseFactory.DataContext
-    {
-        get
+        public collabdbContext Get()
         {
-            throw new NotImplementedException();
+            return dataContext ?? (dataContext = new collabdbContext());
         }
-        set
+        protected override void DisposeCore()
         {
-            throw new NotImplementedException();
+            if (dataContext != null)
+                dataContext.Dispose();
         }
+
+
     }
 }

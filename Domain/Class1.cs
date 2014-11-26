@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CroudFunding.Data
+namespace Domain
 {
-    class TestSlim
+    public class Class1
     {
-       
     }
 }
